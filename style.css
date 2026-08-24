@@ -1,0 +1,319 @@
+/* Reset & Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #e5e7eb;
+    background-color: #0b0f19;
+    /* Fundo estelar similar ao Froststrap */
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Cabeçalho / Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(31, 41, 55, 0.7);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.025em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #fbbf24;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    transition: color 0.2s;
+}
+
+.icon-discord:hover {
+    color: #5865F2 !important;
+}
+
+/* Hero Section */
+.hero {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 64px 24px 48px 24px;
+    text-align: center;
+}
+
+.hero-logo {
+    width: 112px;
+    height: 112px;
+    margin: 0 auto 24px auto;
+    border-radius: 28px;
+    object-fit: cover;
+    border: 2px solid rgba(251, 191, 36, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #9ca3af;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+/* Botões */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.15s, background-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-amber {
+    background-color: #fbbf24;
+    color: #0b0f19;
+    box-shadow: 0 4px 14px rgba(251, 191, 36, 0.25);
+}
+
+.btn-amber:hover {
+    background-color: #f59e0b;
+}
+
+.btn-github {
+    background-color: rgba(31, 41, 55, 0.8);
+    color: #ffffff;
+    border: 1px solid rgba(75, 85, 99, 0.6);
+}
+
+.btn-github:hover {
+    background-color: rgba(55, 65, 81, 0.8);
+}
+
+.btn-discord {
+    background-color: #5865F2;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(88, 101, 242, 0.25);
+}
+
+.btn-discord:hover {
+    background-color: #4752C4;
+}
+
+/* Seções */
+.section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+/* Grid de Cards dos Projetos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: rgba(17, 24, 39, 0.85);
+    border: 1px solid rgba(31, 41, 55, 0.8);
+    border-radius: 16px;
+    padding: 24px;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover {
+    border-color: rgba(251, 191, 36, 0.4);
+    transform: translateY(-2px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.card-icon {
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    background-color: rgba(251, 191, 36, 0.1);
+    color: #fbbf24;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.card-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.card-description {
+    font-size: 0.925rem;
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
+/* Discord Widget Container */
+.discord-container {
+    background-color: rgba(17, 24, 39, 0.85);
+    border: 1px solid rgba(31, 41, 55, 0.8);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.discord-container iframe {
+    border-radius: 12px;
+    max-width: 500px;
+}
+
+/* Rodapé */
+.footer {
+    border-top: 1px solid rgba(31, 41, 55, 0.7);
+    padding: 32px 24px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Esconde a grade inteira de cards */
+.projects-grid {
+    display: none;
+}
+
+/* OU esconde apenas os cards individualmente */
+.card {
+    display: none;
+}
+
+/* Esconde a seção inteira de projetos */
+#projetos {
+    display: none;
+}
